@@ -83,9 +83,6 @@ def cli_main():
         print(f'{COLORS["red"]}Usage: {COLORS["white"]}ipry [-h] [--raw] [--local-db] IP'+COLORS['reset'])
 
     else:
-        if find_arg('--settings'):
-            change_settings()
-
         ip_to_city = 'https://db-ip.com/db/download/ip-to-city-lite'
         ip_to_asn = 'https://db-ip.com/db/download/ip-to-asn-lite'
 
@@ -142,6 +139,9 @@ def cli_main():
         except Exception as er:
             print(f'{COLORS["red"]}Error: {COLORS["white"]}{er}'+COLORS['reset'])
             raise SystemExit(1)
+
+        if find_arg('--settings'):
+            change_settings()
 
         target_ip = find_ip(sys.argv)
         
