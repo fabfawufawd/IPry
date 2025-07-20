@@ -1,6 +1,4 @@
-<p align="center">
-  <video src="imgs/demo.mp4" autoplay loop muted playsinline style="max-width:100%; border-radius: 8px; display: block;"></video>
-</p>
+![Preview](imgs/demo.gif)
 
 Stylish and lightweight command-line tool for inspecting IP addresses with optional **local databases** powered by [DB-IP](https://db-ip.com). Built in pure **Python**.
 
