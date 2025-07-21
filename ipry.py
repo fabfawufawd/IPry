@@ -3,6 +3,7 @@ import maxminddb
 import ipaddress
 import requests
 import sys
+import os
 
 def ip_api(ip):
     url = f'http://ip-api.com/json/{ip}?fields=731'
@@ -79,6 +80,9 @@ def find_arg(*arguments, next_arg=True):
     return None
 
 def cli_main():
+    if os.name == 'nt':
+        os.system('color')
+
     if len(sys.argv) < 2:
         print(f'{COLORS["red"]}Usage: {COLORS["white"]}ipry [-h] [--raw] [--local-db] IP'+COLORS['reset'])
 
